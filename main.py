@@ -39,7 +39,6 @@ class Window(tk.Tk):
         self.len_display_text = len(display_text)
         self.textarea.insert(f"{self.row}.0", display_text + "\t\t")
         self.text_disabled_position = self.textarea.index("end-1c")
-        self.text_disabled_position = self.textarea.index("end-1c")
         self.textarea.tag_add("prompt", f"{self.row}.0", f"{self.row}.{self.len_display_text}")
         self.textarea.tag_config("prompt", font=const.FONT_BOLD)
         self.textarea.bind("<Return>", self.run_command)
